@@ -1,45 +1,44 @@
 # AI Study Assistant
 
-A modern student-focused study assistant built with **HTML, CSS, JavaScript, Flask and MySQL**.
+A modern, responsive **website-only** study assistant for students. The project runs directly in a web browser using **HTML5, CSS3 and JavaScript**.
 
 ## Features
-- Student registration and login
-- Secure password hashing
-- JWT authentication
-- Protected study chat API
-- Simple explanations for Python, HTML, CSS, JavaScript, SQL and cybersecurity
-- MySQL user and chat-history schema
-- Responsive dark/blue student-friendly interface
-- Environment variables for configuration
+- Modern dark/blue responsive student interface
+- Home and project overview
+- Subject learning cards: Python, Java, HTML, CSS, JavaScript, SQL, Cybersecurity and AI Basics
+- Searchable study notes
+- Front-end AI Study Assistant chat with built-in study knowledge
+- Quick-question suggestions
+- Five-question interactive quiz with instant scoring
+- Light/dark theme toggle
+- Mobile navigation
+- Local browser storage for theme preference
+- No backend, database or API key required
+
+## Technology
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Browser Local Storage
 
 ## Project structure
 ```text
 AI-Study-Assistant/
-├── frontend/
-│   ├── index.html
-│   ├── login.html
-│   ├── register.html
-│   ├── dashboard.html
-│   ├── style.css
-│   └── app.js
-├── database/
-│   └── schema.sql
-├── app.py
-├── requirements.txt
-├── .env.example
-├── .gitignore
+├── index.html
+├── style.css
+├── script.js
 └── README.md
 ```
 
-## Run locally
-1. Install Python 3.10+ and MySQL.
-2. Create the database by running `database/schema.sql` in MySQL.
-3. Create a virtual environment and install dependencies with `pip install -r requirements.txt`.
-4. Copy `.env.example` to `.env` and set your MySQL password and a strong JWT secret.
-5. Start the server with `python app.py`.
-6. Open `http://localhost:5000`.
+## How to run
+1. Download or clone this repository.
+2. Open `index.html` in Chrome, Edge, Firefox or another modern browser.
+3. For easier development, open the folder in VS Code and use any local static server/Live Server extension.
 
-The current chatbot uses a built-in study response engine. An external AI provider can be integrated later through a server-side API key stored only in `.env` or deployment secrets.
+**No Python, Flask, MySQL, Node.js or server setup is required.**
 
-## Security notes
-Never commit `.env`, passwords, API keys, JWT secrets or other credentials to GitHub. Use `.env.example` only as a configuration template.
+## Chatbot note
+The assistant is a browser-based study helper with predefined/local responses. It is not connected to a remote AI model. A real AI API can be added later if required, but API keys should never be placed directly in public client-side JavaScript.
+
+## Project purpose
+The project demonstrates how HTML, CSS and JavaScript can be combined to build an interactive educational website that helps students revise concepts, read notes, ask questions and practice with quizzes.
