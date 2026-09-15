@@ -3,48 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI Study Assistant - a website for students to learn, revise, take quizzes and ask study questions.">
+  <meta name="description" content="AI Study Assistant - a modern website for students to learn, ask questions, revise notes and practice quizzes.">
   <title>AI Study Assistant | Student Learning Website</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container">
-      <a class="brand" href="#home"><span class="brand-mark">AI</span><span>Study Assistant</span></a>
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a><a href="#subjects">Subjects</a><a href="#notes">Notes</a><a href="#quiz">Quiz</a><a href="#assistant">Assistant</a><a href="#about">About</a>
-        <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
-      </div>
-    </nav>
-  </header>
+<header class="site-header">
+  <nav class="nav container">
+    <a class="brand" href="#home"><span class="brand-mark">AI</span><span>Study Assistant</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#home">Home</a><a href="#subjects">Subjects</a><a href="#notes">Notes</a><a href="#quiz">Quiz</a><a href="#assistant">Chat</a><a href="#about">About</a>
+      <button class="nav-auth" id="loginBtn">Login</button><button class="nav-auth primary" id="registerBtn">Register</button>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
+    </div>
+  </nav>
+</header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">SMART • SIMPLE • STUDENT FRIENDLY</p>
-          <h1>Learn smarter with your <span>AI Study Assistant.</span></h1>
-          <p class="hero-text">Ask questions, explore subjects, revise quick notes and test your knowledge — all in one responsive website.</p>
-          <div class="actions"><a class="btn" href="#assistant">Ask the Assistant</a><a class="btn ghost" href="#subjects">Explore Subjects</a></div>
-          <div class="stats"><div><strong>7+</strong><small>Subjects</small></div><div><strong>24/7</strong><small>Study Access</small></div><div><strong>100%</strong><small>Browser Based</small></div></div>
-        </div>
-        <div class="hero-card"><div class="ai-orb"><span>AI</span></div><div class="floating-card card-one">📚 Quick Notes</div><div class="floating-card card-two">⚡ Instant Answers</div><div class="floating-card card-three">✓ Practice Quiz</div></div>
-      </div>
-    </section>
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">SMART • SIMPLE • STUDENT FRIENDLY</p>
+      <h1>Your personal <span>AI Study Assistant.</span></h1>
+      <p class="hero-text">Ask study questions, get easy explanations, explore notes, practice quizzes and learn at your own pace — all from one modern website.</p>
+      <div class="actions"><a class="btn get-started" href="#assistant">🚀 Get Started</a><a class="btn ghost" href="#subjects">Explore Subjects</a></div>
+      <div class="stats"><div><strong>8+</strong><small>Subjects</small></div><div><strong>100+</strong><small>Study Answers</small></div><div><strong>24/7</strong><small>Browser Access</small></div></div>
+    </div>
+    <div class="hero-card">
+      <div class="ai-orb"><span>AI</span></div>
+      <div class="floating-card card-one">📚 Study Notes</div><div class="floating-card card-two">💬 Ask Questions</div><div class="floating-card card-three">✓ Practice Quiz</div>
+    </div>
+  </div>
+</section>
 
-    <section class="section" id="subjects"><div class="container"><div class="section-heading"><p class="eyebrow">LEARNING HUB</p><h2>Explore subjects</h2><p>Choose a topic and start learning with simple explanations.</p></div><div class="subject-grid" id="subjectGrid"></div></div></section>
+<section class="section" id="subjects"><div class="container"><div class="section-heading"><p class="eyebrow">LEARNING HUB</p><h2>Explore subjects</h2><p>Choose a subject and ask the assistant anything about its core concepts.</p></div><div class="subject-grid" id="subjectGrid"></div></div></section>
 
-    <section class="section alt" id="notes"><div class="container"><div class="section-heading"><p class="eyebrow">REVISION</p><h2>Study notes</h2><p>Search short, exam-friendly notes by subject or concept.</p></div><div class="search-wrap"><span>⌕</span><input id="noteSearch" type="search" placeholder="Search notes, e.g. DOM, SQL JOIN, CIA Triad..."></div><div class="notes-grid" id="notesGrid"></div></div></section>
+<section class="section alt" id="notes"><div class="container"><div class="section-heading"><p class="eyebrow">REVISION</p><h2>Study notes</h2><p>Search short, exam-friendly notes by subject or concept.</p></div><div class="search-wrap"><span>⌕</span><input id="noteSearch" type="search" placeholder="Search notes, e.g. DOM, SQL JOIN, CIA Triad..."></div><div class="notes-grid" id="notesGrid"></div></div></section>
 
-    <section class="section" id="assistant"><div class="container assistant-grid"><div class="assistant-info"><p class="eyebrow">YOUR STUDY PARTNER</p><h2>Ask a question.<br><span>Get a clear answer.</span></h2><p>Try questions about programming, web development, databases, AI or cybersecurity. This website uses a local study knowledge base, so it works without a backend or API key.</p><div class="suggestions" id="suggestions"><button data-question="Explain Python variables">Python variables</button><button data-question="What is the DOM?">What is DOM?</button><button data-question="Explain SQL JOIN">SQL JOIN</button><button data-question="What is the CIA triad?">CIA Triad</button></div></div><div class="chat-panel"><div class="chat-head"><div class="bot-icon">✦</div><div><strong>AI Study Assistant</strong><small>Online • Website mode</small></div><button id="clearChat" title="Clear chat">↺</button></div><div class="chat-box" id="chatBox"><div class="bubble bot">Hello! 👋 What would you like to study today?</div></div><form class="chat-form" id="chatForm"><input id="chatInput" maxlength="500" autocomplete="off" placeholder="Ask a study question..." required><button class="send-btn" type="submit">➤</button></form></div></div></section>
+<section class="section" id="assistant"><div class="container assistant-grid">
+  <div class="assistant-info"><p class="eyebrow">YOUR STUDY PARTNER</p><h2>Ask anything.<br><span>Learn clearly.</span></h2><p>Ask questions about programming, web development, databases, AI, cybersecurity and other student topics. The website includes a large built-in question-and-answer knowledge base and works without a backend or API key.</p>
+    <div class="suggestions" id="suggestions"><button data-question="Explain Python variables">Python variables</button><button data-question="What is the DOM?">What is DOM?</button><button data-question="Explain SQL JOIN">SQL JOIN</button><button data-question="What is the CIA triad?">CIA Triad</button><button data-question="What is OOP?">OOP</button><button data-question="What is machine learning?">Machine Learning</button></div>
+  </div>
+  <div class="chat-panel">
+    <div class="chat-head"><div class="bot-icon">✦</div><div><strong>AI Study Assistant</strong><small>Online • Website mode</small></div><button id="clearChat" title="Clear chat">↺</button></div>
+    <div class="chat-box" id="chatBox"><div class="bubble bot">Hello! 👋 I’m ready to help you study. Ask me a question about any available subject.</div></div>
+    <form class="chat-form" id="chatForm"><input id="chatInput" maxlength="500" autocomplete="off" placeholder="Ask your question here..." required><button class="send-btn" type="submit">➤</button></form>
+  </div>
+</div></section>
 
-    <section class="section alt" id="quiz"><div class="container quiz-container"><div class="section-heading"><p class="eyebrow">PRACTICE</p><h2>Quick knowledge quiz</h2><p>Answer five questions and see your score instantly.</p></div><div class="quiz-card"><div class="quiz-top"><span id="quizProgress">Question 1 of 5</span><span id="quizScore">Score: 0</span></div><h3 id="quizQuestion"></h3><div id="quizOptions" class="quiz-options"></div><button class="btn" id="nextBtn">Next Question</button><p id="quizResult" class="quiz-result"></p></div></div></section>
+<section class="section alt" id="quiz"><div class="container quiz-container"><div class="section-heading"><p class="eyebrow">PRACTICE</p><h2>Quick knowledge quiz</h2><p>Test your understanding and receive instant feedback.</p></div><div class="quiz-card"><div class="quiz-top"><span id="quizProgress">Question 1</span><span id="quizScore">Score: 0</span></div><h3 id="quizQuestion"></h3><div id="quizOptions" class="quiz-options"></div><button class="btn" id="nextBtn">Next Question</button><p id="quizResult" class="quiz-result"></p></div></div></section>
 
-    <section class="section" id="about"><div class="container about-grid"><div><p class="eyebrow">ABOUT THE PROJECT</p><h2>A simple website for better student learning.</h2></div><div><p>AI Study Assistant is a front-end educational project designed to bring study help, notes, subject discovery and quizzes into one easy-to-use interface.</p><div class="tech-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive UI</span><span>Local Storage</span></div></div></div></section>
-  </main>
+<section class="section" id="about"><div class="container about-grid"><div><p class="eyebrow">ABOUT THE PROJECT</p><h2>One website for your everyday study needs.</h2></div><div><p>AI Study Assistant is a front-end educational project designed for students. It combines a question-answer assistant, notes, subject learning and quizzes in a clean responsive interface.</p><div class="tech-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive UI</span><span>Local Storage</span><span>Website Only</span></div></div></div></section>
+</main>
 
-  <footer><div class="container footer-inner"><div><a class="brand" href="#home"><span class="brand-mark">AI</span><span>Study Assistant</span></a><p>Website-only student learning project.</p></div><p>© <span id="year"></span> AI Study Assistant</p></div></footer>
-  <script src="script.js"></script>
+<footer><div class="container footer-inner"><div><a class="brand" href="#home"><span class="brand-mark">AI</span><span>Study Assistant</span></a><p>Website-only student learning project.</p></div><p>© <span id="year"></span> AI Study Assistant</p></div></footer>
+
+<div class="modal" id="authModal" aria-hidden="true"><div class="modal-card"><button class="modal-close" id="modalClose">×</button><div class="auth-icon">AI</div><p class="eyebrow" id="authEyebrow">STUDENT ACCOUNT</p><h2 id="authTitle">Student Login</h2><p id="authText">Login to personalize your study experience on this browser.</p><form id="authForm"><label>Name<input id="authName" type="text" placeholder="Student name"></label><label>Email<input id="authEmail" type="email" placeholder="student@example.com" required></label><label>Password<input id="authPassword" type="password" placeholder="Enter password" minlength="4" required></label><button class="btn full" type="submit" id="authSubmit">Login</button></form><p class="auth-note">Demo website account: details are stored only in this browser using local storage. No server or real authentication is used.</p></div></div>
+
+<script src="script.js"></script>
 </body>
 </html>
