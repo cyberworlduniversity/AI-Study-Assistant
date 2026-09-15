@@ -1,27 +1,30 @@
 # AI Study Assistant
 
-A modern, responsive **website-only** study assistant for students. The project runs directly in a web browser using **HTML5, CSS3 and JavaScript**.
+A modern, responsive **website-only AI Study Assistant** for students.
 
-## Features
-- Modern dark/blue responsive student interface
-- Home and project overview
-- Subject learning cards: Python, Java, HTML, CSS, JavaScript, SQL, Cybersecurity and AI Basics
-- Searchable study notes
-- Front-end AI Study Assistant chat with built-in study knowledge
-- Quick-question suggestions
-- Five-question interactive quiz with instant scoring
-- Light/dark theme toggle
-- Mobile navigation
-- Local browser storage for theme preference
-- No backend, database or API key required
+## ✨ Features
 
-## Technology
+- 🚀 Modern **Get Started** button that opens the study chat
+- 💬 Student-friendly question-and-answer chat interface
+- 📚 Expanded built-in Q&A knowledge base for Python, Java, HTML, CSS, JavaScript, SQL, AI, cybersecurity, networking and general study topics
+- 🔎 Searchable study notes
+- 🎯 Subject cards with **Ask Assistant** buttons
+- 🧠 Randomized interactive quiz with instant answers and score
+- 👤 Student **Login** and **Register** buttons
+- 💾 Demo student profile stored in browser Local Storage
+- 🌙 Dark/Light theme
+- 📱 Responsive design for desktop, tablet and mobile browsers
+- ⚡ No backend, server, database or API key required
+
+## 🛠️ Technology
+
 - HTML5
 - CSS3
 - Vanilla JavaScript
 - Browser Local Storage
 
-## Project structure
+## 📁 Project Structure
+
 ```text
 AI-Study-Assistant/
 ├── index.html
@@ -30,15 +33,23 @@ AI-Study-Assistant/
 └── README.md
 ```
 
-## How to run
+## ▶️ How to Run
+
 1. Download or clone this repository.
 2. Open `index.html` in Chrome, Edge, Firefox or another modern browser.
-3. For easier development, open the folder in VS Code and use any local static server/Live Server extension.
+3. Click **Get Started** to open the study assistant.
+4. Ask questions, search notes, take the quiz, or use the Student Login/Register buttons.
 
-**No Python, Flask, MySQL, Node.js or server setup is required.**
+You can also open the folder in VS Code and use the Live Server extension for a convenient development preview.
 
-## Chatbot note
-The assistant is a browser-based study helper with predefined/local responses. It is not connected to a remote AI model. A real AI API can be added later if required, but API keys should never be placed directly in public client-side JavaScript.
+## 👤 Student Login/Register Note
 
-## Project purpose
-The project demonstrates how HTML, CSS and JavaScript can be combined to build an interactive educational website that helps students revise concepts, read notes, ask questions and practice with quizzes.
+The Login and Register forms are **front-end demo functionality only**. Student details are stored in the browser's Local Storage. There is no real account server, password authentication or database in this website-only version.
+
+## 🤖 About the Chat Assistant
+
+The assistant currently uses a built-in JavaScript knowledge base with predefined educational answers. It is designed for a college project demonstration and does not call an external AI service. A real AI API can be added later if a backend is introduced.
+
+## 🎓 Project Purpose
+
+AI Study Assistant helps students quickly revise concepts, ask common academic questions, read short notes and practice objective questions through a single modern website.
