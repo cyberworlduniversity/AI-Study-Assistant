@@ -1,55 +1,32 @@
-# AI Study Assistant
+# AI Study Assistant — StudyMate
 
-A modern, responsive **website-only AI Study Assistant** for students.
+A focused, English-only study assistant with a new responsive chat-first interface.
 
-## ✨ Features
+## Current implementation
 
-- 🚀 Modern **Get Started** button that opens the study chat
-- 💬 Student-friendly question-and-answer chat interface
-- 📚 Expanded built-in Q&A knowledge base for Python, Java, HTML, CSS, JavaScript, SQL, AI, cybersecurity, networking and general study topics
-- 🔎 Searchable study notes
-- 🎯 Subject cards with **Ask Assistant** buttons
-- 🧠 Randomized interactive quiz with instant answers and score
-- 👤 Student **Login** and **Register** buttons
-- 💾 Demo student profile stored in browser Local Storage
-- 🌙 Dark/Light theme
-- 📱 Responsive design for desktop, tablet and mobile browsers
-- ⚡ No backend, server, database or API key required
+- New lightweight study workspace; the previous marketing sections, demo login/register, quizzes and hard-coded Q&A UI are removed.
+- Modes for concept explanations, Mermaid flowcharts and programming help.
+- Compact SmolLM2 135M instruct model loaded in the browser through Transformers.js.
+- No application backend, database, login system or API key.
+- Markdown output is sanitized before rendering. Mermaid diagrams use strict security mode.
+- Responsive layout for mobile and desktop.
 
-## 🛠️ Technology
+## Model and runtime
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Browser Local Storage
+The browser downloads the quantized model files from the public Hugging Face model repository on first use and uses browser caching where supported. This is a small open pretrained model, **not a model trained from scratch by this repository**. It is a lightweight prototype and will be less capable than large hosted assistants. Device memory, browser support and initial download speed affect performance.
 
-## 📁 Project Structure
+## Data and privacy
 
-```text
-AI-Study-Assistant/
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-```
+The app does not save conversations to a server or database. Do not enter private or sensitive information. The model files are fetched from the model host; the app source is stored in this GitHub repository.
 
-## ▶️ How to Run
+## Run locally
 
-1. Download or clone this repository.
-2. Open `index.html` in Chrome, Edge, Firefox or another modern browser.
-3. Click **Get Started** to open the study assistant.
-4. Ask questions, search notes, take the quiz, or use the Student Login/Register buttons.
+Serve the repository root with any static HTTP server and open the site in a modern browser. A local server is recommended because the application uses JavaScript modules.
 
-You can also open the folder in VS Code and use the Live Server extension for a convenient development preview.
+## Next validation
 
-## 👤 Student Login/Register Note
-
-The Login and Register forms are **front-end demo functionality only**. Student details are stored in the browser's Local Storage. There is no real account server, password authentication or database in this website-only version.
-
-## 🤖 About the Chat Assistant
-
-The assistant currently uses a built-in JavaScript knowledge base with predefined educational answers. It is designed for a college project demonstration and does not call an external AI service. A real AI API can be added later if a backend is introduced.
-
-## 🎓 Project Purpose
-
-AI Study Assistant helps students quickly revise concepts, ask common academic questions, read short notes and practice objective questions through a single modern website.
+1. Confirm the Vercel preview builds from this branch.
+2. Test model download and inference on Android Chrome and desktop Chrome.
+3. Validate Mermaid output and malformed model responses.
+4. Measure actual model download size, memory use and response latency on target devices.
+5. Only after these checks, consider a separately trained compact study model and decide where to host its weights.
