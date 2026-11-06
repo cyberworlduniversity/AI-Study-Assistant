@@ -6,7 +6,7 @@ A focused, English-only study assistant with a new responsive chat-first interfa
 
 - New lightweight study workspace; the previous marketing sections, demo login/register, quizzes and hard-coded Q&A UI are removed.
 - Modes for concept explanations, Mermaid flowcharts and programming help.
-- Compact SmolLM2 135M instruct model loaded in the browser through Transformers.js.
+- Compact SmolLM2 135M instruct model loaded in the browser through Transformers.js v3.
 - No application backend, database, login system or API key.
 - Markdown output is sanitized before rendering. Mermaid diagrams use strict security mode.
 - Responsive layout for mobile and desktop.
